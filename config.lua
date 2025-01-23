@@ -88,14 +88,14 @@ Config.PoliceJobs = {"miner", "police"}
 Config.Logo = "https://i.postimg.cc/4yP68tjv/pause.png"
 
 Config.Links = {
-    Discord = "https://discord.gg/c85Y5XR3nc",
-    Rules = "https://www.quasar-store.com/es",
-    Store = "https://www.quasar-store.com/es",
-    Facebook = "https://www.quasar-store.com/es",
-    Instagram = "https://www.quasar-store.com/es",
-    TikTok = "https://www.quasar-store.com/es",
-    X = "https://www.quasar-store.com/es",
-    YouTube = "https://www.youtube.com/@quasarstore/videos",
+    Discord = "https://discord.gg/f8yJADPmvV",
+    Rules = "https://discord.gg/jc4gYZ2Bav",
+    Store = "",
+    Facebook = "",
+    Instagram = "",
+    TikTok = "h",
+    X = "",
+    YouTube = "",
 }
 
 Config.OpenInv = function()
