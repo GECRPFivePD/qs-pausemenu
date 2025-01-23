@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="styles.css?v=1.0">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <div class="ui-container">
+      <div class="barss">
+        <div class="square"  onclick="action('inventory')">
+          <img src="./assets/i-inventory.svg" alt="">
+          <span id="inventory">Inventory</span>
+        </div>
+        <div class="square"  onclick="action('links', 'Rules')">
+          <img src="./assets/i-rule.svg" alt="">
+          <span id="rules">Rules</span>
+        </div>
+        <div class="square"  onclick="action('links', 'Store')">
+          <img src="./assets/i-store.svg" alt="">
+          <span id="store">Store</span>
+        </div>
+        <div class="square"  onclick="action('links', 'Discord')">
+          <img src="./assets/i-discord.svg" alt="">
+          <span id="discord">Join us!</span>
+        </div>
+
+        <div class="logo">
+          <img id="logo" src="./assets/quasar_logo.png">
+        </div>
+
+        <div class="square2"  onclick="action('settings')">
+          <img src="./assets/i-settings.svg" alt="">
+          <span id="settings">Settings</span>
+        </div>
+
+        <div class="square2" onclick="action('resume')">
+          <img src="./assets/i-resume.svg" alt="">
+          <span id="resume">Resume</span>
+        </div>
+
+        <div class="square2"  onclick="action('exit')">
+          <img src="./assets/i-exit.svg">
+          <span id="exit">Exit</span>
+        </div>
+
+        <div class="square3" onclick="action('links', 'Facebook')">
+          <img src="./assets/i-facebook.svg">
+        </div>
+
+        <div class="square3" onclick="action('links', 'Instagram')">
+          <img src="./assets/i-instagram.svg">
+        </div>
+
+        <div class="square3" onclick="action('links', 'TikTok')">
+          <img src="./assets/i-tiktok.svg">
+        </div>
+
+        <div class="square3" onclick="action('links', 'X')">
+          <img src="./assets/i-x.svg">
+        </div>
+
+        <div class="square3" onclick="action('links', 'YouTube')">
+          <img src="./assets/i-youtube.svg">
+        </div>
+
+      </div>
+
+      <div class="character">
+        <div class="character_info" id="character_info">
+          <span>Hughie Campbell</span>
+          <img src="./assets/i-male.svg">
+          <span id="text_blue">04·27·2001</span>
+        </div>
+        
+        <div class="character_img"></div>
+
+        <div class="character_info2">
+          <div class="info_player" id="job">
+            <img src="./assets/i-job.svg">
+            <span id="job_text">Job:</span>
+            <span id="text_white">Residencial DeeJay</span>
+          </div>
+          <div class="info_player" id="phone">
+            <img src="./assets/i-phone.svg">
+            <span id="phone_text">Phone:</span>
+            <span id="text_white">123-456</span>
+          </div>
+          <div class="info_player" id="cash">
+            <img src="./assets/i-cash.svg">
+            <span id="cash_text">Cash:</span>
+            <span id="text_white">$ 1.380</span>
+          </div>
+          <div class="info_player" id="bank">
+            <img src="./assets/i-bank.svg">
+            <span id="bank_text">Bank:</span>
+            <span id="text_white">$ 20.000</span>
+          </div>
+
+          <div class="info_server" id="time">
+            <img src="./assets/i-time.svg">
+            <span id="time_text">Time:</span>
+            <span id="text_white">09:30h</span>
+          </div>
+          <div class="info_server" id="date">
+            <img src="./assets/i-date.svg">
+            <span id="date_text">Date:</span>
+            <span id="text_white">08·06·2024</span>
+          </div>
+          <div class="info_server" id="ping">
+            <img src="./assets/i-ping.svg">
+            <span id="ping_text">Ping:</span>
+            <span id="text_white">12 ms</span>
+          </div>
+          <div class="info_server" id="totalplayer">
+            <img src="./assets/i-players.svg">
+            <span id="player_text">Players:</span>
+            <span id="text_white">72/128</span>
+          </div>
+          <div class="info_server" id="police">
+            <img src="./assets/i-police.svg">
+            <span id="police_text">Police:</span>
+            <span id="text_white">Unavailable</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="map">
+        <div class="location-img"><img src="./assets/i-map_pin.svg" ></div>
+        <span id="location"></span>
+        <div id="map"></div>
+      </div>
+      <div class="map_de"  onclick="action('map')"></div>
+
+      <audio id="HoverSound" preload="auto">
+        <source src="./assets/hover.mp4" type="audio/mpeg">
+    </audio>
+    <audio id="SelectSound" preload="auto">
+      <source src="./assets/select.mp4" type="audio/mpeg">
+  </audio>
+    </div>
+    <script
+    src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""
+  ></script>
+    <script src="main.js"></script>
+  </body>
+</html>
