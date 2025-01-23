@@ -93,11 +93,12 @@ Config.Links = {
     Store = "",
     Facebook = "",
     Instagram = "",
-    TikTok = "h",
+    TikTok = "",
     X = "",
     YouTube = "",
 }
 
 Config.OpenInv = function()
-    ExecuteCommand("inventory")  -- add the export or command here to open the inventory
+    --ExecuteCommand("inventory")  -- add the export or command here to open the inventory
+    exports.ox_inventory:openInventory()
 end
