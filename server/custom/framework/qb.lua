@@ -52,7 +52,8 @@ QBCore.Functions.CreateCallback('qs-pausemenu:GetData', function(source, cb)
             Bank = Player.PlayerData.money['bank'],
             Ping = GetPlayerPing(source),
             Police = police_available,
-            Phone =  safeGetNumberPhone(source),
+           -- Phone =  safeGetNumberPhone(source),
+           Phone = Player.PlayerData.charinfo.phone
         },
 
         players = getServerStatus(),

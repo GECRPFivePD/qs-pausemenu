@@ -85,7 +85,7 @@ Config.Framework = esxHas and 'esx' or qbHas and 'qb' or 'esx' -- You can change
 
 Config.PoliceJobs = {"miner", "police"}
 
-Config.Logo = "https://i.postimg.cc/4yP68tjv/pause.png"
+Config.Logo = "https://cdn.discordapp.com/attachments/1322726709258092575/1331883282010345514/GEC_2.png?ex=67933c77&is=6791eaf7&hm=8133123022a71aa4ad7b4622b805f7ae89a93e59bc69ee5bd038570ec3043a23&"
 
 Config.Links = {
     Discord = "https://discord.gg/c85Y5XR3nc",
